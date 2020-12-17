@@ -1,0 +1,17 @@
+import java.io.IOException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) throws IOException {
+		Scanner teclado = new Scanner(System.in);
+		String nome = teclado.nextLine();
+		double salario = teclado.nextDouble();
+		double vendas = teclado.nextDouble();
+		BigDecimal resultado = new BigDecimal((salario) + (vendas * 0.15)).setScale(2, RoundingMode.HALF_DOWN);
+		System.out.print("TOTAL = R$ " + resultado + "\n");
+
+	}
+}
